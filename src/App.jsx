@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import DigitalTools from './Components/DigitalTools';
-import productsData from './data/products.json';
 import Steps from './Components/Steps';
 import Pricing from './Components/Pricing';
 import CTA from './Components/CTA';
 import Footer from './Components/Footer';
+import Cart from './Components/Cart';
+import productsData from './data/products.json';
 
 function App() {
   const [activeTab, setActiveTab] = useState('products');
@@ -24,38 +26,48 @@ function App() {
     }
   };
 
+  const removeFromCart = (id) => {
+    setCart(cart.filter(item => item.id !== id));
+    toast.error("Item removed from cart! 🗑️");
+  };
+
+  const handleCheckout = () => {
+    setCart([]);
+    toast.success("Proceeding to checkout! All items cleared. 🎉");
+    setActiveTab('products');
+  };
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-sans">
       <Navbar cartCount={cart.length} setActiveTab={setActiveTab} />
-      
-      {activeTab === 'products' ? (
-        <>
-          <Hero />
-          <DigitalTools 
-            products={productsData} 
-            addToCart={addToCart} 
-            activeTab={activeTab} 
+
+      <main>
+        {activeTab === 'products' ? (
+          <>
+            <Hero />
+            <DigitalTools 
+              products={productsData} 
+              addToCart={addToCart} 
+              activeTab={activeTab} 
+              setActiveTab={setActiveTab}
+              cartCount={cart.length}
+            />
+            <Steps />
+            <Pricing />
+            <CTA />
+          </>
+        ) : (
+          <Cart 
+            cart={cart} 
+            removeFromCart={removeFromCart} 
+            handleCheckout={handleCheckout}
             setActiveTab={setActiveTab}
-            cartCount={cart.length}
           />
-          <Steps/>
-          <Pricing/>
-          <CTA/>
-        </>
-      ) : (
-        <div className="py-20 text-center">
-          <h2 className="text-3xl font-bold">Cart Section Coming Soon...</h2>
-          <button 
-            onClick={() => setActiveTab('products')} 
-            className="btn btn-primary mt-4"
-          >
-            Back to Products
-          </button>
-        </div>
-      )}
+        )}
+      </main>
 
       <Footer />
-      <ToastContainer position="top-right" autoClose={2000} />
+      <ToastContainer position="top-right" autoClose={2000} theme="colored" />
     </div>
   );
 }
