@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality content instantly with advanced AI writing models and SEO tools.",
+    "price": 29,
+    "period": "monthly",
+    "tag": "Best Seller",
+    "tagType": "warning",
+    "features": ["Unlimited Generations", "20+ Writing Templates", "Grammar Checker"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/2593/2593635.png"
+  },
+  {
+    "id": 2,
+    "name": "Design Templates Pack",
+    "description": "2500+ premium templates for social media, websites, and branding projects.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "Popular",
+    "tagType": "primary",
+    "features": ["Vector Assets Included", "Monthly Updates", "Commercial License"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/3659/3659754.png"
+  },
+  {
+    "id": 3,
+    "name": "Premium Stock Assets",
+    "description": "Access to millions of high-quality stock photos, videos, and 3D illustrations.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "New",
+    "tagType": "success",
+    "features": ["10M+ Assets", "Exclusive Content", "No Attribution Needed"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/3342/3342176.png"
+  },
+  {
+    "id": 4,
+    "name": "Automation Toolkit",
+    "description": "Automate repetitive tasks and integrate your favorite tools with powerful workflows.",
+    "price": 79,
+    "period": "yearly",
+    "tag": "Sale",
+    "tagType": "error",
+    "features": ["50+ Integrations", "API Access", "Custom Workflows"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/2103/2103633.png"
+  },
+  {
+    "id": 5,
+    "name": "Resume Builder Pro",
+    "description": "Create professional, ATS-friendly resumes in minutes with our drag-and-drop editor.",
+    "price": 15,
+    "period": "one-time",
+    "tag": "Hot",
+    "tagType": "info",
+    "features": ["ATS-Optimized", "15+ Templates", "Export to PDF"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/942/942748.png"
+  },
+  {
+    "id": 6,
+    "name": "Social Media Kit",
+    "description": "Complete bundle for managing and growing your social media presence effectively.",
+    "price": 39,
+    "period": "monthly",
+    "tag": "Featured",
+    "tagType": "accent",
+    "features": ["1000+ Assets", "Scheduler Included", "Analytics Dashboard"],
+    "icon": "https://cdn-icons-png.flaticon.com/512/1968/1968641.png"
+  }
+]
