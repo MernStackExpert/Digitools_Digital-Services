@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import DigitalTools from './Components/DigitalTools';
 import productsData from './data/products.json';
+import Steps from './Components/Steps';
 
 function App() {
   const [activeTab, setActiveTab] = useState('products');
@@ -34,6 +35,7 @@ function App() {
             setActiveTab={setActiveTab}
             cartCount={cart.length}
           />
+          <Steps/>
         </>
       ) : (
         <div className="py-20 text-center">
