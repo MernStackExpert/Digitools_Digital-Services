@@ -7,6 +7,7 @@ import DigitalTools from './Components/DigitalTools';
 import productsData from './data/products.json';
 import Steps from './Components/Steps';
 import Pricing from './Components/Pricing';
+import CTA from './Components/CTA';
 
 function App() {
   const [activeTab, setActiveTab] = useState('products');
@@ -38,6 +39,7 @@ function App() {
           />
           <Steps/>
           <Pricing/>
+          <CTA/>
         </>
       ) : (
         <div className="py-20 text-center">
