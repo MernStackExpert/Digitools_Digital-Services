@@ -8,6 +8,7 @@ import productsData from './data/products.json';
 import Steps from './Components/Steps';
 import Pricing from './Components/Pricing';
 import CTA from './Components/CTA';
+import Footer from './Components/Footer';
 
 function App() {
   const [activeTab, setActiveTab] = useState('products');
@@ -53,6 +54,7 @@ function App() {
         </div>
       )}
 
+      <Footer />
       <ToastContainer position="top-right" autoClose={2000} />
     </div>
   );
